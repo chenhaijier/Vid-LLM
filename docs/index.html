@@ -147,6 +147,72 @@
       </div>
     </div>
 
+    <!-- 新增：Qualitative Results -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-full">
+    <h2 class="title is-3">Qualitative Results</h2>
+    <div class="hero-body">
+
+
+      <!-- 原图1：定性结果任务示意 -->
+      <img src="static/images/qualitative.png" alt="Qualitative Results Examples" loading="lazy" style="margin-top: 2rem; margin-bottom: 1rem;">
+      <div class="content has-text-justified" style="margin-bottom: 2rem;">
+        Our model can accomplish the following three tasks: (1) 3D Question Answering, where the model answers queries on object counts, locations, and attributes from reconstructed scenes; (2) 3D Dense Captioning, which provides detailed semantic descriptions of rooms and key objects; and (3) 3D Visual Grounding, where the model localizes target objects in 3D space according to textual instructions.
+      </div>
+
+      <!-- 新增：3D Visual Grounding 视频展示（3×2） -->
+      <div class="container">
+        <div class="columns is-multiline is-centered">
+          <!-- 第一行 -->
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g1.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g2.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g3.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- 第二行 -->
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g4.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g5.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 10px;">
+              <source src="static/videos/g6.MP4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          Qualitative results of 3D visual grounding on the ScanRefer dataset. Each demo demonstrates how the model localizes target objects in reconstructed 3D scenes according to natural language queries.
+          Qualitative video results of 3D visual grounding on six ScanRefer-like scenes. Each video demonstrates how the model localizes target objects in reconstructed 3D scenes according to natural language queries.
+        </div>
+      </div>
+      <!-- /视频展示 -->
+    </div>
+  </div>
+</div>
+
     <!-- Overview of Vid-LLM -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
@@ -184,26 +250,6 @@
           <img src="static/images/train.png" alt="Training Strategy" loading="lazy">
           <div class="content has-text-justified">
             We adopt a two-stage training strategy to utilize the shared encoder for both geometry and semantics. Stage 1 performs dual-teacher distillation, transferring geometric priors from a reconstruction model and semantic knowledge from a multimodal LLM, enabling the encoder to learn both capabilities in a balanced way. Stage 2 jointly optimizes all downstream modules with 3D vision–language objectives, while incorporating auxiliary reconstruction losses to provide the model with sufficient reconstruction capability and ensure real-scale consistency.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 新增：Qualitative Results -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Qualitative Results</h2>
-        <div class="hero-body">
-          <!-- 预留定性结果图1接口：请把图片放到 static/images/qualitative.png -->
-          <img src="static/images/qualitative.png" alt="Qualitative Results Examples" loading="lazy" style="margin-bottom: 1rem;">
-          <div class="content has-text-justified" style="margin-bottom: 2rem;">
-            Our model can accomplish the following three tasks:(1) 3D Question Answering, where the model answers queries on object counts, locations, and attributes from reconstructed scenes; (2) 3D Dense Captioning, which provides detailed semantic descriptions of rooms and key objects; and (3) 3D Visual Grounding, where the model localizes target objects in 3D space according to textual instructions.
-          </div>
-
-          <!-- 预留定性结果图2接口：请把图片放到 static/images/grounding.png -->
-          <img src="static/images/grounding.png" alt="Qualitative results of 3D visual grounding on ScanRefer" loading="lazy">
-          <div class="content has-text-justified">
-            Qualitative results of 3D visual grounding on the ScanRefer dataset.
           </div>
         </div>
       </div>
